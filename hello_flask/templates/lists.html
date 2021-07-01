@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Random Numbers</h1>
+    {% for number in random_numbers %}
+        <p>{{ number }}</p>
+    {% endfor %}
+    <h1>Students</h1>
+    {% for student in students %}
+        <p>{{ student['name'] }} - {{ student['age'] }}</p>
+    {% endfor %}
+
+    <h1>Tabla Users</h1>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Full</th>
+        </tr>
+        
+    
+    {% for user in users %}
+    
+        <tr>
+            <td>{{user['first_name']}}</td>
+            <td>{{user['last_name']}}</td>
+            <td>{{user['first_name'] + ' ' + user['last_name']}}</td>
+        </tr>
+
+    {% endfor %}
+    
+    </table>
+</body>
+</html>
